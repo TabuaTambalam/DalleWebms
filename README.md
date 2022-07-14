@@ -21,3 +21,4 @@ interpo "superman", mini model
 - Hardcoded to fp16 (the checkpoint itself is fp16, no need to upconv them to fp32 unless for speed reason)
 - Partially-locked generation.
 - Use ncnn VQGAN for decoding & interpolation, those animations above produced by ncnn VQGAN.
+- Original seqs of those animation above is https://github.com/TabuaTambalam/DalleWebms/releases/download/0.1/ozv.bin
