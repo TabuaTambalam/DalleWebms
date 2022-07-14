@@ -22,3 +22,4 @@ interpo "superman", mini model
 - Partially-locked generation.
 - Use ncnn VQGAN for decoding & interpolation, those animations above produced by ncnn VQGAN.
 - Original seqs of those animation above is https://github.com/TabuaTambalam/DalleWebms/releases/download/0.1/ozv.bin
+- colab link https://colab.research.google.com/github/TabuaTambalam/DalleWebms/blob/main/Min_dall_singlfileGPU.ipynb
