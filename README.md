@@ -10,6 +10,12 @@ maid knight, mega model
 
 ![interpo mk2](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/maidknight0.gif?raw=true) ![interpo mk2plus](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/maidknight1.gif?raw=true)
 
+rooms, mega model
+
+![interpo mk2plus](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/room.gif?raw=true)
+
+More: https://github.com/TabuaTambalam/DalleWebms/blob/main/rooms.md
+
 interpo "superman", mini model
 
 ![interpo superman, mini model](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/interpo_mini.gif?raw=true)
