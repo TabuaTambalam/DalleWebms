@@ -20,6 +20,13 @@ interpo "superman", mini model
 
 ![interpo superman, mini model](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/interpo_mini.gif?raw=true)
 
+# Outpainting:
+
+![sabaku2](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/sbk0_2.png?raw=true)
+
+![fighalf](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/genshn0.png?raw=true)
+More samples here: https://github.com/TabuaTambalam/DalleWebms/tree/main/docs/still
+
 # About Min_dall_singlfileGPU.ipynb
 
 - Most codes came from https://github.com/kuprel/min-dalle , merged into single notebook, with following modifications:
