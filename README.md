@@ -32,6 +32,7 @@ interpo "superman", mini model
 can decode width-free image like those above. vq_vert.param can do height-free decode.
 
 More samples here: https://github.com/TabuaTambalam/DalleWebms/tree/main/docs/still
+- original seqs of all those samples: https://github.com/TabuaTambalam/DalleWebms/releases/download/0.1/seqs_outpainting.zip
 
 # About Min_dall_singlfileGPU.ipynb
 
