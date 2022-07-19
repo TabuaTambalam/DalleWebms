@@ -24,7 +24,8 @@ interpo "superman", mini model
 
 ![sabaku2](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/sbk0_2.png?raw=true)
 
-![sabaku2](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/kof0_0.png?raw=true)
+![market](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/kof0_0.png?raw=true)
+![market](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/kof0_1.png?raw=true)
 
 ![fighalf](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/genshn0.png?raw=true)
 
