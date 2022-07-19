@@ -39,6 +39,9 @@ can decode width-free image like those above. vq_vert.param can do height-free d
 More samples here: https://github.com/TabuaTambalam/DalleWebms/tree/main/docs/still
 - original seqs of all those samples: https://github.com/TabuaTambalam/DalleWebms/releases/download/0.1/seqs_outpainting.zip
 
+# Height-free decode:
+![orig](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/imgpix.png?raw=true) ![mix1](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/imgtok.png?raw=true) ![mix2](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/mergg.png?raw=true)
+
 # About Min_dall_singlfileGPU.ipynb
 
 - Most codes came from https://github.com/kuprel/min-dalle , merged into single notebook, with following modifications:
