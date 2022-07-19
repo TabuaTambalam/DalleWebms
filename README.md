@@ -24,7 +24,13 @@ interpo "superman", mini model
 
 ![sabaku2](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/sbk0_2.png?raw=true)
 
+![sabaku2](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/kof0_0.png?raw=true)
+
 ![fighalf](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/genshn0.png?raw=true)
+
+- vq.param for NCNN here: https://github.com/TabuaTambalam/vqqncnn
+can decode width-free image like those above. vq_vert.param can do height-free decode.
+
 More samples here: https://github.com/TabuaTambalam/DalleWebms/tree/main/docs/still
 
 # About Min_dall_singlfileGPU.ipynb
