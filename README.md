@@ -28,6 +28,10 @@ interpo "superman", mini model
 
 ![fighalf](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/genshn0.png?raw=true)
 
+![bridge](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/brg4_0.png?raw=true)
+
+![zelta](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/zlt0_2.png?raw=true)
+
 - vq.param for NCNN here: https://github.com/TabuaTambalam/vqqncnn
 can decode width-free image like those above. vq_vert.param can do height-free decode.
 
