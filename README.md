@@ -21,6 +21,7 @@ interpo "superman", mini model
 ![interpo superman, mini model](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/interpo_mini.gif?raw=true)
 
 # Outpainting:
+without selecting
 
 ![sabaku2](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/sbk0_2.png?raw=true)
 
@@ -38,6 +39,24 @@ can decode width-free image like those above. vq_vert.param can do height-free d
 
 More samples here: https://github.com/TabuaTambalam/DalleWebms/tree/main/docs/still
 - original seqs of all those samples: https://github.com/TabuaTambalam/DalleWebms/releases/download/0.1/seqs_outpainting.zip
+
+# Interactive Outpainting:
+- notebook here: https://colab.research.google.com/github/TabuaTambalam/DalleWebms/blob/main/min_dalle_interactive_hacky.ipynb
+
+![ljl](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/sele9.png?raw=true)
+
+![dragon](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/6-2.png?raw=true)
+
+![table](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/sele6.png?raw=true)
+
+![wlop](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/11-2.png?raw=true)
+
+![crab](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/2-7.png?raw=true)
+
+
+mini-model:
+
+![faces](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/sele8.png?raw=true)
 
 # Height-free decode:
 ![orig](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/imgpix.png?raw=true) ![mix1](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/imgtok.png?raw=true) ![mix2](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/mergg.png?raw=true)
