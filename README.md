@@ -21,7 +21,7 @@ interpo "superman", mini model
 ![interpo superman, mini model](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/interpo_mini.gif?raw=true)
 
 # Outpainting:
-without selecting
+without user select
 
 ![sabaku2](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/sbk0_2.png?raw=true)
 
