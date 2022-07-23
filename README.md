@@ -45,6 +45,8 @@ More samples here: https://github.com/TabuaTambalam/DalleWebms/tree/main/docs/st
 
 ![roma](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/roma0.png?raw=true)
 
+![mermaids](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/mermaids.png?raw=true)
+
 ![ljl](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/sele9.png?raw=true)
 
 ![dragon](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/6-2.png?raw=true)
