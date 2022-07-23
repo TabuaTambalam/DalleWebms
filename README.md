@@ -43,6 +43,8 @@ More samples here: https://github.com/TabuaTambalam/DalleWebms/tree/main/docs/st
 # Interactive Outpainting:
 - notebook here: https://colab.research.google.com/github/TabuaTambalam/DalleWebms/blob/main/min_dalle_interactive_hacky.ipynb
 
+![roma](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/roma0.png?raw=true)
+
 ![ljl](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/sele9.png?raw=true)
 
 ![dragon](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/6-2.png?raw=true)
