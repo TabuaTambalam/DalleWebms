@@ -61,6 +61,8 @@ More samples here: https://github.com/TabuaTambalam/DalleWebms/tree/main/docs/st
 
 ![wlop](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/11-2.png?raw=true)
 
+![assk](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/asska.png?raw=true)
+
 ![crab](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/2-7.png?raw=true)
 
 with crop (overall color tone will alter):
