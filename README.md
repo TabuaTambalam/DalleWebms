@@ -41,8 +41,8 @@ More samples here: https://github.com/TabuaTambalam/DalleWebms/tree/main/docs/st
 - original seqs of all those samples: https://github.com/TabuaTambalam/DalleWebms/releases/download/0.1/seqs_outpainting.zip
 
 # Interactive Outpainting:
-- notebook here: https://colab.research.google.com/github/TabuaTambalam/DalleWebms/blob/main/min_dalle_interactive_hacky.ipynb
-- results from rudalle's ESRGAN & guided diffusion (now inside the notebook above) here: https://github.com/TabuaTambalam/DalleWebms/blob/main/rudallestuff.md
+- Notebook here: https://colab.research.google.com/github/TabuaTambalam/DalleWebms/blob/main/min_dalle_interactive_hacky.ipynb
+- Results from rudalle's ESRGAN & guided diffusion (now inside the notebook above) here: https://github.com/TabuaTambalam/DalleWebms/blob/main/rudallestuff.md
 
 ![rabb](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/rabbits.png?raw=true)
 
