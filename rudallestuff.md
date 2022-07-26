@@ -10,7 +10,7 @@ Jack000/guided-diffusion:
 steps file
 https://github.com/TabuaTambalam/DalleWebms/releases/download/0.1/hindufaces_steps.1.13.7z
 
-Guided-diffusion can look bad sometimes, e.g.
+Guided-diffusion can make thing worse sometimes, e.g.
 
 ![seaorig](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/sea.png?raw=true)
 
