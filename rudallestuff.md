@@ -5,6 +5,10 @@ Jack000/guided-diffusion:
 
 ![GD1](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/hindu_GD1862_0.png?raw=true)
 
+ddim:
+![GD1](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/hindu_GD1862_0ddim.png?raw=true)
+
+different crop:
 ![GD2](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/hindu_GD1596_0.png?raw=true)
 
 steps file
