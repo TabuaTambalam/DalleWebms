@@ -48,7 +48,7 @@ More samples here: https://github.com/TabuaTambalam/DalleWebms/tree/main/docs/st
 
 ![kaz2](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/kast2.png?raw=true)
 
-![kaz1](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/kast1.png?raw=true)
+![kaz1](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/kastl.png?raw=true)
 
 ![hell](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/hell.png?raw=true)
 
