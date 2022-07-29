@@ -85,6 +85,7 @@ mini-model:
 - choice the initial image with candidate_select, run it the second time,
 - now the infinite gen thread started, click the `showp(-1)` cell when you see the ozv.bin file size growth.
 - to stop the infinite gen thread, rename `once.txt` to `-.txt`, when you see `once.txt` re-appeared, the thread is stopped.
+- results are stored in ozv.bin as original seqs.
 - examples:
 ![c1](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/kb5.png?raw=true)
 
