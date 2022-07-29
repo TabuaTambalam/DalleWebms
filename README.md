@@ -44,17 +44,19 @@ More samples here: https://github.com/TabuaTambalam/DalleWebms/tree/main/docs/st
 - Notebook here: https://colab.research.google.com/github/TabuaTambalam/DalleWebms/blob/main/min_dalle_interactive_hacky.ipynb
 - Results from rudalle's ESRGAN & guided diffusion (now inside the notebook above) here: https://github.com/TabuaTambalam/DalleWebms/blob/main/rudallestuff.md
 
-![rabb](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/rabbits.png?raw=true)
+![cn3](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/restuur.png?raw=true)
 
-![roma](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/roma0.png?raw=true)
+![kaz2](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/kast2.png?raw=true)
 
-![mermaids](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/mermaids.png?raw=true)
+![kaz1](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/kast1.png?raw=true)
+
+![hell](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/hell.png?raw=true)
+
+![azz](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/azzazzyn.png?raw=true)
+
+- Early results when attention_state not duplicated yet: https://github.com/TabuaTambalam/DalleWebms/blob/main/notfixAS.md
 
 ![mermaids](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/sea.png?raw=true)
-
-![ljl](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/sele9.png?raw=true)
-
-![zomb](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/zomb.png?raw=true)
 
 ![dragon](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/6-2.png?raw=true)
 
