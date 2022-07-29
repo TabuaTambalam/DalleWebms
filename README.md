@@ -79,6 +79,19 @@ mini-model:
 
 ![faces](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/sele8.png?raw=true)
 
+# Infinite similar gen:
+- With min_dalle_interactive_hacky.ipynb, run 'Make a prompt' first with your prompt,
+- move to 'Infinite similar gen', run it first time.
+- choice the initial image with candidate_select, run it the second time,
+- now the infinite gen thread started, click the `showp(-1)` cell when you see the ozv.bin file size growth.
+- to stop the infinite gen thread, rename `once.txt` to `-.txt`, when you see `once.txt` re-appeared, the thread is stopped.
+- examples:
+![c1](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/kb5.png?raw=true)
+
+![c1](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/kb2.png?raw=true)
+
+![c1](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/kb4.png?raw=true)
+
 # Height-free decode:
 ![orig](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/imgpix.png?raw=true) ![mix1](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/imgtok.png?raw=true) ![mix2](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/mergg.png?raw=true)
 
