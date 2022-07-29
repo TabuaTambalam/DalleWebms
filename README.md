@@ -81,7 +81,7 @@ mini-model:
 
 # Infinite similar gen:
 - With min_dalle_interactive_hacky.ipynb, run 'Make a prompt' first with your prompt,
-- move to 'Infinite similar gen', run it first time.
+- move to 'Infinite similar gen', run the cell the first time.
 - choice the initial image with candidate_select, run it the second time,
 - now the infinite gen thread started, click the `showp(-1)` cell when you see the ozv.bin file size growth.
 - to stop the infinite gen thread, rename `once.txt` to `-.txt`, when you see `once.txt` re-appeared, the thread is stopped.
