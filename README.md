@@ -93,6 +93,15 @@ mini-model:
 
 ![c1](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/kb4.png?raw=true)
 
+- A good initial image (well, good for the model, not human) will bring good results afterward. Those below kept top two rows locked in token space:
+- (seqs: https://github.com/TabuaTambalam/DalleWebms/releases/download/0.1/ozv_lock3_fefaces.7z about 8000 images as it decoded)
+
+![c1](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/kb10.png?raw=true)
+
+![c1](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/kb11.png?raw=true)
+
+![c1](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/kb12.png?raw=true)
+
 # Height-free decode:
 ![orig](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/imgpix.png?raw=true) ![mix1](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/imgtok.png?raw=true) ![mix2](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/mergg.png?raw=true)
 
