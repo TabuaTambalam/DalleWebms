@@ -94,7 +94,7 @@ mini-model:
 ![c1](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/kb4.png?raw=true)
 
 - A good initial image (well, good for the model, not human) will bring good results afterward. Those below kept top two rows locked in token space:
-- (seqs: https://github.com/TabuaTambalam/DalleWebms/releases/download/0.1/ozv_lock3_fefaces.7z about 8000 images as it decoded)
+- (seqs: https://github.com/TabuaTambalam/DalleWebms/releases/download/0.1/ozv_lock3_fefaces.7z , 8880 images as it decoded)
 
 ![c1](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/kb10.png?raw=true)
 
