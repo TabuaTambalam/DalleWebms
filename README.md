@@ -115,6 +115,8 @@ mini-model:
 
 ![c1](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/kb18.png?raw=true)
 
+- more: https://github.com/TabuaTambalam/DalleWebms/blob/main/locktop2a.md
+
 # Height-free decode:
 ![orig](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/imgpix.png?raw=true) ![mix1](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/imgtok.png?raw=true) ![mix2](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/mergg.png?raw=true)
 
