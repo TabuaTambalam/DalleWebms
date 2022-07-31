@@ -1,0 +1,78 @@
+<html><body><style>
+FL { 
+position: relative;
+display: inline-block;
+background-color: #808;
+width: 1024px;
+min-height: 1024px;
+}
+
+NG { 
+min-width: 64px;
+min-height: 64px;
+position: relative;
+display: inline-block;
+text-align: center;
+line-height : 60px;
+font-weight: bold;
+font-size: 140%;
+color: #f00;
+}
+
+.ckb {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	min-width: 1024px;
+	-webkit-mask: url(k16x16.png) 0% 0% / 100%;
+}
+</style>
+<FL><img class="ckb" src="21/4832.png"></FL><br>
+</body>
+<script>
+var nfo=new Array(256);
+
+function asstok()
+{
+	var atr=this.value.split(' ').filter(element => element);
+	for(var i=0;i<256;i++)
+	{
+		nfo[i].innerHTML=atr[1+i];
+	}
+
+
+}
+
+function setup()
+{
+	var bz=document.getElementsByTagName('FL')[0];
+
+	for(var y=0;y<16;y++)
+	{
+		var yp=y*16;
+		for(var x=0;x<16;x++)
+		{
+			var idx=yp+x;
+			var ngp=document.createElement('NG');
+			ngp.innerHTML=idx;
+			nfo[idx]=ngp;
+			bz.appendChild(ngp);
+			
+		}
+		
+	}
+
+	var txta=document.createElement('textarea');
+	txta.cols=150;
+	txta.rows=30;
+	document.body.appendChild(txta);
+	txta.ondblclick=asstok;
+	
+
+	
+
+}
+setup()
+
+</script>
+</html>
