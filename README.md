@@ -108,6 +108,13 @@ mini-model:
 
 ![c1](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/kb14.png?raw=true)
 
+
+![c1](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/kb16.png?raw=true)
+
+![c1](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/kb17.png?raw=true)
+
+![c1](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/kb18.png?raw=true)
+
 # Height-free decode:
 ![orig](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/imgpix.png?raw=true) ![mix1](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/imgtok.png?raw=true) ![mix2](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/mergg.png?raw=true)
 
