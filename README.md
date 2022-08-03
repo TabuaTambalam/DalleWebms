@@ -118,6 +118,7 @@ mini-model:
 - more: https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/coomerbait/locktop2a.md
 - https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/coomerbait/locktop2b.md
 - https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/coomerbait/locktop2c.md
+- Also locktop2d.md, locktop2e.md ... try until you get 404'd
 
 # Height-free decode:
 ![orig](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/imgpix.png?raw=true) ![mix1](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/imgtok.png?raw=true) ![mix2](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/mergg.png?raw=true)
