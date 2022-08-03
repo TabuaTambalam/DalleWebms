@@ -1,3 +1,5 @@
+-  seqs: https://github.com/TabuaTambalam/DalleWebms/releases/download/0.1/fefaces2.7z
+
 ![c1](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/coomerbait/kb40.png?raw=true)
 
 ![c1](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/coomerbait/kb41.png?raw=true)
