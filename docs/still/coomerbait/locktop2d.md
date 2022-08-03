@@ -10,4 +10,8 @@
 
 ![c1](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/coomerbait/kb45.png?raw=true)
 
+# Failed attempts
+
 ![c1](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/coomerbait/kb46.png?raw=true)
+
+![c1](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/coomerbait/kb47.png?raw=true)
