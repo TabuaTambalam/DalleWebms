@@ -5,3 +5,7 @@
 ![c1](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/coomerbait/kb50.png?raw=true)
 
 ![c1](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/coomerbait/kb51.png?raw=true)
+
+![c1](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/coomerbait/kb53.png?raw=true)
+
+![c1](https://github.com/TabuaTambalam/DalleWebms/blob/main/docs/still/coomerbait/kb54.png?raw=true)
