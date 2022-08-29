@@ -707,7 +707,8 @@ nam_emb={
 'pnnx_unique_6_weight':'input_blocks.5.0.in_layers.0.weight',
 'pnnx_unique_7_weight':'input_blocks.5.0.out_layers.0.weight',
 'pnnx_unique_8_weight':'input_blocks.7.0.in_layers.0.weight',
-'pnnx_unique_9_weight':'input_blocks.7.0.out_layers.0.weight'
+'pnnx_unique_9_weight':'input_blocks.7.0.out_layers.0.weight',
+'pnnx_fold_96_pnnx_fold_96':'zzz'
 }
 
 nam_mid={
