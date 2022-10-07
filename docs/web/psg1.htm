@@ -1,0 +1,117 @@
+
+var canv=document.createElement('canvas');
+var canv_real=document.createElement('canvas');
+var ctx=canv.getContext('2d');
+var ctx_real=canv_real.getContext('2d');
+
+var imgfill=document.createElement('img');
+imgfill.src='https://localhost:8333/web/imgfill.png';
+
+var brush=['source-over','destination-out'];
+
+var infoarr=null;
+function muz(e)
+{
+rX = e.offsetX>>3;
+rY = e.offsetY>>3
+}
+
+var sizmul=1;
+var prvX=-1;
+var prvY=-1;
+var kot=0;
+function dipoi()
+{
+if(kot > 0x20)
+{
+	if( prvX==rX && prvY==rY ) {sizmul++;}
+	prvX=rX;
+	prvY=rY;
+	kot=0;
+}
+kot+=1
+ctx.drawImage(imgfill, rX<<3, rY<<3, sizmul<<3, sizmul<<3);
+ctx_real.drawImage(imgfill, rX, rY, sizmul, sizmul);
+
+}
+
+drh=null;
+function muzd(e) {
+
+rX = e.offsetX>>3;
+rY = e.offsetY>>3
+this.onmousemove = muz;
+drh=setInterval(dipoi,1);
+
+}
+
+function muzu() {
+clearInterval(drh);
+sizmul=1;
+canv.onmousemove = null;
+}
+var inv=1;
+
+function swinv()
+{
+	if(inv == 1){inv=0; infoarea.style.color='#0c0';}
+	else {inv=1; infoarea.style.color='#00c';}
+	muzu();
+}
+
+function swbrush()
+{
+	var tmp=brush[1];
+	brush[1]=brush[0];
+	brush[0]=tmp;
+
+	ctx.globalCompositeOperation=brush[0];
+	ctx_real.globalCompositeOperation=brush[1];
+	infoarea.innerText=brush[0];
+	muzu();
+	
+}
+
+
+function sendreal()
+{
+	fetch('https://localhost:8133/dl?inv='+inv+'&url='+canv_real.toDataURL('image/png').substr(22))
+	infoarea.innerText+='\n\nSAVED';
+}
+
+function mkcanvas()
+{
+canv.width = dXw<<3;
+canv.height = dYh<<3;
+canv.style.background='url(https://localhost:8333/'+imgfna+') 0% 0% / 100%';
+document.body.appendChild(canv);
+canv.onmousedown=muzd;
+canv.onmouseup=muzu;
+
+
+canv_real.width = dXw;
+canv_real.height = dYh;
+canv_real.style.background=canv.style.background;
+document.body.appendChild(canv_real);
+canv_real.style.verticalAlign='top';
+canv_real.style.webkitTransform='matrix(3,0,0,3,'+(dXw+20)+','+dYh+')';
+
+ctx_real.fillStyle = 'black';
+ctx_real.fillRect(0, 0, dXw, dYh);
+ctx_real.globalCompositeOperation=brush[1];
+
+document.onkeydown=swbrush;
+canv_real.onclick=swbrush;
+canv_real.ondblclick=swinv;
+
+infoarea=document.createElement('FL');
+document.body.appendChild(infoarea);
+infoarea.innerText='Click the thumbnail\nto switch brush/eraser\nclick this area to submit';
+infoarea.style.webkitTransform='matrix(2,0,0,2,0,-'+(dYh<<2)+')';
+infoarea.style.color='#00c';
+infoarea.onclick=sendreal;
+
+
+}
+mkcanvas();
+</script></html>
