@@ -5,10 +5,12 @@ import jitbase
 
 torch.set_grad_enabled(False)
 
+
 class transformer(nn.Module):
     def __init__(self):
         super().__init__()
 
+        self.cut=0
         self.text_model_embeddings_token_embedding = nn.Embedding(embedding_dim=768, num_embeddings=49408, sparse=False)
         self.text_model_encoder_layers_0_layer_norm1 = nn.LayerNorm(elementwise_affine=True, eps=0.000010, normalized_shape=(768,))
         self.text_model_encoder_layers_0_self_attn_q_proj = nn.Linear(bias=True, in_features=768, out_features=768)
@@ -119,11 +121,12 @@ class transformer(nn.Module):
     def FinalNorm(self, v):
         return self.text_model_final_layer_norm(v)
 
+    
     def forward(self, x_in):
-        x=self.forward2(x_in, jitbase.clip_early_cut)
-        return self.FinalNorm(x)
+      x=self.forward2(x_in)
+      return self.FinalNorm(x)
 
-    def forward2(self, v_0, step=0):
+    def forward2(self, v_0):
 
         k70 = v_0.size(0)
         k77 = v_0.size(1)
@@ -411,7 +414,7 @@ class transformer(nn.Module):
         v_266 = (v_263 * v_265)
         v_267 = self.text_model_encoder_layers_7_mlp_fc2(v_266)
         v_268 = (v_261 + v_267)
-        if step == -4:
+        if self.cut == -4:
           return v_268
 
         v_269 = self.text_model_encoder_layers_8_layer_norm1(v_268)
@@ -447,7 +450,7 @@ class transformer(nn.Module):
         v_299 = (v_296 * v_298)
         v_300 = self.text_model_encoder_layers_8_mlp_fc2(v_299)
         v_301 = (v_294 + v_300)
-        if step == -3:
+        if self.cut == -3:
           return v_301
 
         v_302 = self.text_model_encoder_layers_9_layer_norm1(v_301)
@@ -483,7 +486,7 @@ class transformer(nn.Module):
         v_332 = (v_329 * v_331)
         v_333 = self.text_model_encoder_layers_9_mlp_fc2(v_332)
         v_334 = (v_327 + v_333)
-        if step == -2:
+        if self.cut == -2:
           return v_334
 
         v_335 = self.text_model_encoder_layers_10_layer_norm1(v_334)
@@ -519,7 +522,7 @@ class transformer(nn.Module):
         v_365 = (v_362 * v_364)
         v_366 = self.text_model_encoder_layers_10_mlp_fc2(v_365)
         v_367 = (v_360 + v_366)
-        if step == -1:
+        if self.cut == -1:
           return v_367
 
         v_368 = self.text_model_encoder_layers_11_layer_norm1(v_367)
@@ -561,4 +564,4 @@ class transformer(nn.Module):
 
 from accelerate import init_empty_weights
 with init_empty_weights():
-    jitbase.transformerJIT= transformer().requires_grad_(False).eval()
+    jitbase.transformerJIT= torch.jit.script(transformer().requires_grad_(False).eval())
