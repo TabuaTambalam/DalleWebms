@@ -1,5 +1,5 @@
 webroot='/content/'
-fpg='''<html><body><center><h1>tw url:</h1><input></input><br><br><a href="/proc">Show Procs</a></center></body></html>'''
+fpg='''<html><body><center><h1>tw url:</h1><input></input><br><br><a href="/proc">Show Procs</a><br><br><a href="/masking">Masking Tool</a></center></body></html>'''
 
 
 procpage1='<html><body><style>PC {display: flow-root; margin-left: 5%;}</style>'
@@ -48,9 +48,9 @@ def dodl():
 	return fpg
 
 
-@app.route('/sf/<pa>')
+@app.route('/sf/<path:pa>')
 def static_file(pa):
-	fpa=pa.replace('^','/')
+	fpa=pa
 	if not os.path.isfile(fpa):
 		fpa=webroot+fpa
 	if os.path.isfile(fpa):
@@ -60,9 +60,9 @@ def static_file(pa):
 		return 'No '+fpa, 404
 
 
-@app.route('/sf2/<pa>')
+@app.route('/sf2/<path:pa>')
 def downloadFile(pa):
-	fpa=webroot+pa.replace('^','/')
+	fpa=webroot+pa
 	if os.path.isfile(fpa):
 		return send_file(fpa, as_attachment=True)
 	else:
@@ -98,11 +98,13 @@ def listfo(sig):
 
 
 
-@app.route('/masking/<bsimg>/<h>/<w>')
-def showpainter(bsimg,h,w):
-	psg0=readhtml('web/psg0.txt')
-	psg1=readhtml('web/psg1.txt')
-	return psg0+'\nvar dXw='+w+';\nvar dYh='+h+";\nvar imgfna='"+bsimg+"';\n\n"+psg1
+@app.route('/masking')
+def showpainter():
+	zt=readhtml('web/curmsk.txt').splitlines()
+	psg0=readhtml('web/psg0.htm')
+	psg1=readhtml('web/psg1.htm')
+	psg1=psg1.replace('https://localhost:8333','/sf').replace('https://localhost:8133','')
+	return psg0+zt[0]+';\nvar dYh='+zt[1]+";\nvar imgfna='"+zt[2]+"';\n\n"+psg1
 	
 
 
