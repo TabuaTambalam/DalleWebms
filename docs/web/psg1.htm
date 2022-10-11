@@ -77,6 +77,7 @@ function sendreal()
 {
 	fetch('https://localhost:8133/dl?inv='+inv+'&url='+canv_real.toDataURL('image/png').substr(22))
 	infoarea.innerText+='\n\nSAVED';
+	muzu();
 }
 
 function mkcanvas()
