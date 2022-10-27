@@ -743,7 +743,7 @@ nam_out={
 }
 
 nam_emb2={
-'pnnx_unique_0.weight':'input_blocks_1_0_in_layers_0.weight',
+'pnnx_unique_0_weight':'input_blocks_1_0_in_layers_0.weight',
 'pnnx_unique_1_weight':'input_blocks_1_0_out_layers_0.weight',
 'pnnx_unique_2_weight':'input_blocks_2_0_in_layers_0.weight',
 'pnnx_unique_3_weight':'input_blocks_2_0_out_layers_0.weight',
@@ -787,7 +787,7 @@ nam_emb2={
 }
 
 nam_mid2={
-'pnnx_unique_0.weight':'output_blocks_0_0_in_layers_0.weight',
+'pnnx_unique_0_weight':'output_blocks_0_0_in_layers_0.weight',
 'pnnx_unique_1_weight':'output_blocks_0_0_out_layers_0.weight',
 'pnnx_unique_2_weight':'output_blocks_1_0_in_layers_0.weight',
 'pnnx_unique_3_weight':'output_blocks_1_0_out_layers_0.weight',
@@ -814,7 +814,7 @@ nam_mid2={
 }
 
 nam_out2={
-'pnnx_unique_0.weight':'output_blocks_6_0_in_layers_0.weight',
+'pnnx_unique_0_weight':'output_blocks_6_0_in_layers_0.weight',
 'pnnx_unique_1_weight':'output_blocks_6_0_out_layers_0.weight',
 'pnnx_unique_2_weight':'output_blocks_7_0_in_layers_0.weight',
 'pnnx_unique_3_weight':'output_blocks_7_0_out_layers_0.weight',
