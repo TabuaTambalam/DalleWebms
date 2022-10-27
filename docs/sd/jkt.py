@@ -796,7 +796,7 @@ nam_mid2={
 'pnnx_unique_6_weight':'output_blocks_3_0_in_layers_0.weight',
 'pnnx_unique_7_weight':'output_blocks_3_0_out_layers_0.weight',
 'pnnx_unique_8_weight':'output_blocks_4_0_in_layers_0.weight',
-'pnnx_unique_9_weight':'output_blocks_4_0_out_layers_0.weight'
+'pnnx_unique_9_weight':'output_blocks_4_0_out_layers_0.weight',
 'pnnx_unique_10_weight':'output_blocks_5_0_in_layers_0.weight',
 'pnnx_unique_11_weight':'output_blocks_5_0_out_layers_0.weight',
 'output_blocks_0_0_in_layers_0_bias':'output_blocks_0_0_in_layers_0.bias',
@@ -823,7 +823,7 @@ nam_out2={
 'pnnx_unique_6_weight':'output_blocks_9_0_in_layers_0.weight',
 'pnnx_unique_7_weight':'output_blocks_9_0_out_layers_0.weight',
 'pnnx_unique_8_weight':'output_blocks_10_0_in_layers_0.weight',
-'pnnx_unique_9_weight':'output_blocks_10_0_out_layers_0.weight'
+'pnnx_unique_9_weight':'output_blocks_10_0_out_layers_0.weight',
 'pnnx_unique_10_weight':'output_blocks_11_0_in_layers_0.weight',
 'pnnx_unique_11_weight':'output_blocks_11_0_out_layers_0.weight',
 'pnnx_unique_12_weight':'out_0.weight',
