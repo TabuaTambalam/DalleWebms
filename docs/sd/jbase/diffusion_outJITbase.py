@@ -11,12 +11,12 @@ class diffusion_out(nn.Module):
     def __init__(self):
         super().__init__()
         self.output_blocks_6_0_in_layers_0 = nn.GroupNorm(num_groups=32,num_channels=1920,eps=0.000010)
-        self.output_blocks_6_0_in_layers_1 = nn.SiLU()
+
         self.output_blocks_6_0_in_layers_2 = nn.Conv2d(bias=True, dilation=(1,1), groups=1, in_channels=1920, kernel_size=(3,3), out_channels=640, padding=(1,1), padding_mode='zeros', stride=(1,1))
-        self.output_blocks_6_0_emb_layers_0 = nn.SiLU()
+
         self.output_blocks_6_0_emb_layers_1 = nn.Linear(bias=True, in_features=1280, out_features=640)
         self.output_blocks_6_0_out_layers_0 = nn.GroupNorm(num_groups=32,num_channels=640,eps=0.000010)
-        self.output_blocks_6_0_out_layers_1 = nn.SiLU()
+
         self.output_blocks_6_0_out_layers_3 = nn.Conv2d(bias=True, dilation=(1,1), groups=1, in_channels=640, kernel_size=(3,3), out_channels=640, padding=(1,1), padding_mode='zeros', stride=(1,1))
         self.output_blocks_6_0_skip_connection = nn.Conv2d(bias=True, dilation=(1,1), groups=1, in_channels=1920, kernel_size=(1,1), out_channels=640, padding=(0,0), padding_mode='zeros', stride=(1,1))
         self.output_blocks_6_1_norm = nn.GroupNorm(affine=True, eps=0.000001, num_channels=640, num_groups=32)
@@ -36,11 +36,11 @@ class diffusion_out(nn.Module):
         self.output_blocks_6_1_transformer_blocks_0_ff_net_2 = nn.Linear(bias=True, in_features=2560, out_features=640)
         self.output_blocks_6_1_proj_out = nn.Conv2d(bias=True, dilation=(1,1), groups=1, in_channels=640, kernel_size=(1,1), out_channels=640, padding=(0,0), padding_mode='zeros', stride=(1,1))
         self.output_blocks_7_0_in_layers_0 = nn.GroupNorm(num_groups=32,num_channels=1280,eps=0.000010)
-        self.output_blocks_7_0_in_layers_1 = nn.SiLU()
+
         self.output_blocks_7_0_in_layers_2 = nn.Conv2d(bias=True, dilation=(1,1), groups=1, in_channels=1280, kernel_size=(3,3), out_channels=640, padding=(1,1), padding_mode='zeros', stride=(1,1))
         self.output_blocks_7_0_emb_layers_1 = nn.Linear(bias=True, in_features=1280, out_features=640)
         self.output_blocks_7_0_out_layers_0 = nn.GroupNorm(num_groups=32,num_channels=640,eps=0.000010)
-        self.output_blocks_7_0_out_layers_1 = nn.SiLU()
+
         self.output_blocks_7_0_out_layers_3 = nn.Conv2d(bias=True, dilation=(1,1), groups=1, in_channels=640, kernel_size=(3,3), out_channels=640, padding=(1,1), padding_mode='zeros', stride=(1,1))
         self.output_blocks_7_0_skip_connection = nn.Conv2d(bias=True, dilation=(1,1), groups=1, in_channels=1280, kernel_size=(1,1), out_channels=640, padding=(0,0), padding_mode='zeros', stride=(1,1))
         self.output_blocks_7_1_norm = nn.GroupNorm(affine=True, eps=0.000001, num_channels=640, num_groups=32)
@@ -60,11 +60,11 @@ class diffusion_out(nn.Module):
         self.output_blocks_7_1_transformer_blocks_0_ff_net_2 = nn.Linear(bias=True, in_features=2560, out_features=640)
         self.output_blocks_7_1_proj_out = nn.Conv2d(bias=True, dilation=(1,1), groups=1, in_channels=640, kernel_size=(1,1), out_channels=640, padding=(0,0), padding_mode='zeros', stride=(1,1))
         self.output_blocks_8_0_in_layers_0 = nn.GroupNorm(num_groups=32,num_channels=960,eps=0.000010)
-        self.output_blocks_8_0_in_layers_1 = nn.SiLU()
+
         self.output_blocks_8_0_in_layers_2 = nn.Conv2d(bias=True, dilation=(1,1), groups=1, in_channels=960, kernel_size=(3,3), out_channels=640, padding=(1,1), padding_mode='zeros', stride=(1,1))
         self.output_blocks_8_0_emb_layers_1 = nn.Linear(bias=True, in_features=1280, out_features=640)
         self.output_blocks_8_0_out_layers_0 = nn.GroupNorm(num_groups=32,num_channels=640,eps=0.000010)
-        self.output_blocks_8_0_out_layers_1 = nn.SiLU()
+
         self.output_blocks_8_0_out_layers_3 = nn.Conv2d(bias=True, dilation=(1,1), groups=1, in_channels=640, kernel_size=(3,3), out_channels=640, padding=(1,1), padding_mode='zeros', stride=(1,1))
         self.output_blocks_8_0_skip_connection = nn.Conv2d(bias=True, dilation=(1,1), groups=1, in_channels=960, kernel_size=(1,1), out_channels=640, padding=(0,0), padding_mode='zeros', stride=(1,1))
         self.output_blocks_8_1_norm = nn.GroupNorm(affine=True, eps=0.000001, num_channels=640, num_groups=32)
@@ -85,11 +85,11 @@ class diffusion_out(nn.Module):
         self.output_blocks_8_1_proj_out = nn.Conv2d(bias=True, dilation=(1,1), groups=1, in_channels=640, kernel_size=(1,1), out_channels=640, padding=(0,0), padding_mode='zeros', stride=(1,1))
         self.output_blocks_8_2_conv = nn.Conv2d(bias=True, dilation=(1,1), groups=1, in_channels=640, kernel_size=(3,3), out_channels=640, padding=(1,1), padding_mode='zeros', stride=(1,1))
         self.output_blocks_9_0_in_layers_0 = nn.GroupNorm(num_groups=32,num_channels=960,eps=0.000010)
-        self.output_blocks_9_0_in_layers_1 = nn.SiLU()
+
         self.output_blocks_9_0_in_layers_2 = nn.Conv2d(bias=True, dilation=(1,1), groups=1, in_channels=960, kernel_size=(3,3), out_channels=320, padding=(1,1), padding_mode='zeros', stride=(1,1))
         self.output_blocks_9_0_emb_layers_1 = nn.Linear(bias=True, in_features=1280, out_features=320)
         self.output_blocks_9_0_out_layers_0 = nn.GroupNorm(num_groups=32,num_channels=320,eps=0.000010)
-        self.output_blocks_9_0_out_layers_1 = nn.SiLU()
+
         self.output_blocks_9_0_out_layers_3 = nn.Conv2d(bias=True, dilation=(1,1), groups=1, in_channels=320, kernel_size=(3,3), out_channels=320, padding=(1,1), padding_mode='zeros', stride=(1,1))
         self.output_blocks_9_0_skip_connection = nn.Conv2d(bias=True, dilation=(1,1), groups=1, in_channels=960, kernel_size=(1,1), out_channels=320, padding=(0,0), padding_mode='zeros', stride=(1,1))
         self.output_blocks_9_1_norm = nn.GroupNorm(affine=True, eps=0.000001, num_channels=320, num_groups=32)
@@ -109,11 +109,11 @@ class diffusion_out(nn.Module):
         self.output_blocks_9_1_transformer_blocks_0_ff_net_2 = nn.Linear(bias=True, in_features=1280, out_features=320)
         self.output_blocks_9_1_proj_out = nn.Conv2d(bias=True, dilation=(1,1), groups=1, in_channels=320, kernel_size=(1,1), out_channels=320, padding=(0,0), padding_mode='zeros', stride=(1,1))
         self.output_blocks_10_0_in_layers_0 = nn.GroupNorm(num_groups=32,num_channels=640,eps=0.000010)
-        self.output_blocks_10_0_in_layers_1 = nn.SiLU()
+
         self.output_blocks_10_0_in_layers_2 = nn.Conv2d(bias=True, dilation=(1,1), groups=1, in_channels=640, kernel_size=(3,3), out_channels=320, padding=(1,1), padding_mode='zeros', stride=(1,1))
         self.output_blocks_10_0_emb_layers_1 = nn.Linear(bias=True, in_features=1280, out_features=320)
         self.output_blocks_10_0_out_layers_0 = nn.GroupNorm(num_groups=32,num_channels=320,eps=0.000010)
-        self.output_blocks_10_0_out_layers_1 = nn.SiLU()
+
         self.output_blocks_10_0_out_layers_3 = nn.Conv2d(bias=True, dilation=(1,1), groups=1, in_channels=320, kernel_size=(3,3), out_channels=320, padding=(1,1), padding_mode='zeros', stride=(1,1))
         self.output_blocks_10_0_skip_connection = nn.Conv2d(bias=True, dilation=(1,1), groups=1, in_channels=640, kernel_size=(1,1), out_channels=320, padding=(0,0), padding_mode='zeros', stride=(1,1))
         self.output_blocks_10_1_norm = nn.GroupNorm(affine=True, eps=0.000001, num_channels=320, num_groups=32)
@@ -133,11 +133,11 @@ class diffusion_out(nn.Module):
         self.output_blocks_10_1_transformer_blocks_0_ff_net_2 = nn.Linear(bias=True, in_features=1280, out_features=320)
         self.output_blocks_10_1_proj_out = nn.Conv2d(bias=True, dilation=(1,1), groups=1, in_channels=320, kernel_size=(1,1), out_channels=320, padding=(0,0), padding_mode='zeros', stride=(1,1))
         self.output_blocks_11_0_in_layers_0 = nn.GroupNorm(num_groups=32,num_channels=640,eps=0.000010)
-        self.output_blocks_11_0_in_layers_1 = nn.SiLU()
+
         self.output_blocks_11_0_in_layers_2 = nn.Conv2d(bias=True, dilation=(1,1), groups=1, in_channels=640, kernel_size=(3,3), out_channels=320, padding=(1,1), padding_mode='zeros', stride=(1,1))
         self.output_blocks_11_0_emb_layers_1 = nn.Linear(bias=True, in_features=1280, out_features=320)
         self.output_blocks_11_0_out_layers_0 = nn.GroupNorm(num_groups=32,num_channels=320,eps=0.000010)
-        self.output_blocks_11_0_out_layers_1 = nn.SiLU()
+
         self.output_blocks_11_0_out_layers_3 = nn.Conv2d(bias=True, dilation=(1,1), groups=1, in_channels=320, kernel_size=(3,3), out_channels=320, padding=(1,1), padding_mode='zeros', stride=(1,1))
         self.output_blocks_11_0_skip_connection = nn.Conv2d(bias=True, dilation=(1,1), groups=1, in_channels=640, kernel_size=(1,1), out_channels=320, padding=(0,0), padding_mode='zeros', stride=(1,1))
         self.output_blocks_11_1_norm = nn.GroupNorm(affine=True, eps=0.000001, num_channels=320, num_groups=32)
@@ -157,7 +157,7 @@ class diffusion_out(nn.Module):
         self.output_blocks_11_1_transformer_blocks_0_ff_net_2 = nn.Linear(bias=True, in_features=1280, out_features=320)
         self.output_blocks_11_1_proj_out = nn.Conv2d(bias=True, dilation=(1,1), groups=1, in_channels=320, kernel_size=(1,1), out_channels=320, padding=(0,0), padding_mode='zeros', stride=(1,1))
         self.out_0 = nn.GroupNorm(num_groups=32,num_channels=320,eps=0.000010)
-        self.out_1 = nn.SiLU()
+
         self.out_2 = nn.Conv2d(bias=True, dilation=(1,1), groups=1, in_channels=320, kernel_size=(3,3), out_channels=4, padding=(1,1), padding_mode='zeros', stride=(1,1))
 
 
@@ -168,9 +168,9 @@ class diffusion_out(nn.Module):
         k70x8=k70<<3
 
         v_11 = torch.cat((v_0, v_8), dim=1)
-        v_15 = self.output_blocks_6_0_emb_layers_0(v_1)
+        v_15 = F.silu(v_1)
 #===
-        v_26 = self.output_blocks_6_0_skip_connection(v_11) + self.output_blocks_6_0_out_layers_3(self.output_blocks_6_0_out_layers_1(self.output_blocks_6_0_out_layers_0(self.output_blocks_6_0_in_layers_2(self.output_blocks_6_0_in_layers_1(self.output_blocks_6_0_in_layers_0(v_11))) + self.output_blocks_6_0_emb_layers_1(v_15).unsqueeze(2).unsqueeze(3))))
+        v_26 = self.output_blocks_6_0_skip_connection(v_11) + self.output_blocks_6_0_out_layers_3(F.silu(self.output_blocks_6_0_out_layers_0(self.output_blocks_6_0_in_layers_2(F.silu(self.output_blocks_6_0_in_layers_0(v_11))) + self.output_blocks_6_0_emb_layers_1(v_15).unsqueeze(2).unsqueeze(3))))
 
         v_30 = self.output_blocks_6_1_proj_in(self.output_blocks_6_1_norm(v_26)).permute(0,2,3,1).reshape(k70, -1, 640)
         v_31 = self.output_blocks_6_1_transformer_blocks_0_norm1(v_30)
@@ -190,7 +190,7 @@ class diffusion_out(nn.Module):
         v_77, v_78 = torch.chunk(input=self.output_blocks_6_1_transformer_blocks_0_ff_net_0_proj(self.output_blocks_6_1_transformer_blocks_0_norm3(v_74)), chunks=2, dim=-1)
         v_89 = torch.cat((v_26+self.output_blocks_6_1_proj_out((self.output_blocks_6_1_transformer_blocks_0_ff_net_2(v_77 * F.gelu(input=v_78, approximate='none')) + v_74).reshape(k70, k73, k74, 640).permute(0,3,1,2)), v_7), dim=1)
 #===
-        v_103 = self.output_blocks_7_0_skip_connection(v_89) + self.output_blocks_7_0_out_layers_3(self.output_blocks_7_0_out_layers_1(self.output_blocks_7_0_out_layers_0(self.output_blocks_7_0_in_layers_2(self.output_blocks_7_0_in_layers_1(self.output_blocks_7_0_in_layers_0(v_89))) + self.output_blocks_7_0_emb_layers_1(v_15).unsqueeze(2).unsqueeze(3))))
+        v_103 = self.output_blocks_7_0_skip_connection(v_89) + self.output_blocks_7_0_out_layers_3(F.silu(self.output_blocks_7_0_out_layers_0(self.output_blocks_7_0_in_layers_2(F.silu(self.output_blocks_7_0_in_layers_0(v_89))) + self.output_blocks_7_0_emb_layers_1(v_15).unsqueeze(2).unsqueeze(3))))
 
         v_107 = self.output_blocks_7_1_proj_in(self.output_blocks_7_1_norm(v_103)).permute(0,2,3,1).reshape(k70, -1, 640)
         v_108 = self.output_blocks_7_1_transformer_blocks_0_norm1(v_107)
@@ -210,7 +210,7 @@ class diffusion_out(nn.Module):
         v_154, v_155 = torch.chunk(input=self.output_blocks_7_1_transformer_blocks_0_ff_net_0_proj(self.output_blocks_7_1_transformer_blocks_0_norm3(v_151)), chunks=2, dim=-1)
         v_166 = torch.cat((v_103+ self.output_blocks_7_1_proj_out((self.output_blocks_7_1_transformer_blocks_0_ff_net_2(v_154 * F.gelu(input=v_155, approximate='none')) + v_151).reshape(k70, k73, k74, 640).permute(0,3,1,2)), v_6), dim=1)
 #===
-        v_180 = self.output_blocks_8_0_skip_connection(v_166) + self.output_blocks_8_0_out_layers_3(self.output_blocks_8_0_out_layers_1(self.output_blocks_8_0_out_layers_0(self.output_blocks_8_0_in_layers_2(self.output_blocks_8_0_in_layers_1(self.output_blocks_8_0_in_layers_0(v_166))) + self.output_blocks_8_0_emb_layers_1(v_15).unsqueeze(2).unsqueeze(3))))
+        v_180 = self.output_blocks_8_0_skip_connection(v_166) + self.output_blocks_8_0_out_layers_3(F.silu(self.output_blocks_8_0_out_layers_0(self.output_blocks_8_0_in_layers_2(F.silu(self.output_blocks_8_0_in_layers_0(v_166))) + self.output_blocks_8_0_emb_layers_1(v_15).unsqueeze(2).unsqueeze(3))))
 
         v_184 = self.output_blocks_8_1_proj_in(self.output_blocks_8_1_norm(v_180)).permute(0,2,3,1).reshape(k70, -1, 640)
         v_185 = self.output_blocks_8_1_transformer_blocks_0_norm1(v_184)
@@ -232,7 +232,7 @@ class diffusion_out(nn.Module):
         v_245 = torch.cat((self.output_blocks_8_2_conv(F.interpolate(input=v_240 , scale_factor=2.0, mode='nearest')), v_5), dim=1)
 
 #===
-        v_259 = self.output_blocks_9_0_skip_connection(v_245) + self.output_blocks_9_0_out_layers_3(self.output_blocks_9_0_out_layers_1(self.output_blocks_9_0_out_layers_0(self.output_blocks_9_0_in_layers_2(self.output_blocks_9_0_in_layers_1(self.output_blocks_9_0_in_layers_0(v_245))) + self.output_blocks_9_0_emb_layers_1(v_15).unsqueeze(2).unsqueeze(3))))
+        v_259 = self.output_blocks_9_0_skip_connection(v_245) + self.output_blocks_9_0_out_layers_3(F.silu(self.output_blocks_9_0_out_layers_0(self.output_blocks_9_0_in_layers_2(F.silu(self.output_blocks_9_0_in_layers_0(v_245))) + self.output_blocks_9_0_emb_layers_1(v_15).unsqueeze(2).unsqueeze(3))))
 
         v_263 =  self.output_blocks_9_1_proj_in(self.output_blocks_9_1_norm(v_259)).permute(0,2,3,1).reshape(k70, -1, 320)
         v_264 = self.output_blocks_9_1_transformer_blocks_0_norm1(v_263)
@@ -254,7 +254,7 @@ class diffusion_out(nn.Module):
         v_310, v_311 = torch.chunk(input=self.output_blocks_9_1_transformer_blocks_0_ff_net_0_proj(self.output_blocks_9_1_transformer_blocks_0_norm3(v_307)), chunks=2, dim=-1)
         v_322 = torch.cat((v_259+ self.output_blocks_9_1_proj_out((self.output_blocks_9_1_transformer_blocks_0_ff_net_2(v_310 * F.gelu(input=v_311, approximate='none')) + v_307).reshape(k70, k73b, k74b, 320).permute(0,3,1,2)), v_4), dim=1)
 #===
-        v_336 = self.output_blocks_10_0_skip_connection(v_322) + self.output_blocks_10_0_out_layers_3(self.output_blocks_10_0_out_layers_1(self.output_blocks_10_0_out_layers_0(self.output_blocks_10_0_in_layers_2(self.output_blocks_10_0_in_layers_1(self.output_blocks_10_0_in_layers_0(v_322))) + self.output_blocks_10_0_emb_layers_1(v_15).unsqueeze(2).unsqueeze(3))))
+        v_336 = self.output_blocks_10_0_skip_connection(v_322) + self.output_blocks_10_0_out_layers_3(F.silu(self.output_blocks_10_0_out_layers_0(self.output_blocks_10_0_in_layers_2(F.silu(self.output_blocks_10_0_in_layers_0(v_322))) + self.output_blocks_10_0_emb_layers_1(v_15).unsqueeze(2).unsqueeze(3))))
 
         v_340 = self.output_blocks_10_1_proj_in(self.output_blocks_10_1_norm(v_336)).permute(0,2,3,1).reshape(k70, -1, 320)
         v_341 = self.output_blocks_10_1_transformer_blocks_0_norm1(v_340)
@@ -274,7 +274,7 @@ class diffusion_out(nn.Module):
         v_387, v_388 = torch.chunk(input=self.output_blocks_10_1_transformer_blocks_0_ff_net_0_proj(self.output_blocks_10_1_transformer_blocks_0_norm3(v_384)), chunks=2, dim=-1)     
         v_399 = torch.cat((v_336+ self.output_blocks_10_1_proj_out((self.output_blocks_10_1_transformer_blocks_0_ff_net_2(v_387 * F.gelu(input=v_388, approximate='none')) + v_384).reshape(k70, k73b, k74b, 320).permute(0,3,1,2)), v_3), dim=1)
 #===
-        v_413 = self.output_blocks_11_0_skip_connection(v_399) + self.output_blocks_11_0_out_layers_3(self.output_blocks_11_0_out_layers_1(self.output_blocks_11_0_out_layers_0(self.output_blocks_11_0_in_layers_2(self.output_blocks_11_0_in_layers_1(self.output_blocks_11_0_in_layers_0(v_399))) + self.output_blocks_11_0_emb_layers_1(v_15).unsqueeze(2).unsqueeze(3))))
+        v_413 = self.output_blocks_11_0_skip_connection(v_399) + self.output_blocks_11_0_out_layers_3(F.silu(self.output_blocks_11_0_out_layers_0(self.output_blocks_11_0_in_layers_2(F.silu(self.output_blocks_11_0_in_layers_0(v_399))) + self.output_blocks_11_0_emb_layers_1(v_15).unsqueeze(2).unsqueeze(3))))
 
         v_417 = self.output_blocks_11_1_proj_in(self.output_blocks_11_1_norm(v_413)).permute(0,2,3,1).reshape(k70, -1, 320)
         v_418 = self.output_blocks_11_1_transformer_blocks_0_norm1(v_417)
@@ -294,7 +294,7 @@ class diffusion_out(nn.Module):
         v_464, v_465 = torch.chunk(input=self.output_blocks_11_1_transformer_blocks_0_ff_net_0_proj(self.output_blocks_11_1_transformer_blocks_0_norm3(v_461)), chunks=2, dim=-1)
         v_475 = v_413+self.output_blocks_11_1_proj_out((self.output_blocks_11_1_transformer_blocks_0_ff_net_2(v_464 * F.gelu(input=v_465, approximate='none')) + v_461).reshape(k70, k73b, k74b, 320).permute(0,3,1,2))
 
-        return self.out_2(self.out_1(self.out_0(v_475)))
+        return self.out_2(F.silu(self.out_0(v_475)))
 
 with init_empty_weights():
     jitbase.diffusion_out_base= diffusion_out().requires_grad_(False).eval()
