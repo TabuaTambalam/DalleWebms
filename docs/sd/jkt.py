@@ -844,3 +844,66 @@ nam_out2={
 
 nam2=[nam_emb,nam_mid,nam_out]
 nam3=[nam_emb2,nam_mid2,nam_out2]
+
+
+
+modkeys3=[
+ ['input_blocks_1_1_transformer_blocks_0_attn',
+ 'input_blocks_2_1_transformer_blocks_0_attn',
+ 'input_blocks_4_1_transformer_blocks_0_attn',
+ 'input_blocks_5_1_transformer_blocks_0_attn',
+ 'input_blocks_7_1_transformer_blocks_0_attn',
+ 'input_blocks_8_1_transformer_blocks_0_attn',
+ 'middle_block_1_transformer_blocks_0_attn'],
+
+ ['output_blocks_3_1_transformer_blocks_0_attn',
+ 'output_blocks_4_1_transformer_blocks_0_attn',
+ 'output_blocks_5_1_transformer_blocks_0_attn'],
+
+ ['output_blocks_6_1_transformer_blocks_0_attn',
+ 'output_blocks_7_1_transformer_blocks_0_attn',
+ 'output_blocks_8_1_transformer_blocks_0_attn',
+ 'output_blocks_9_1_transformer_blocks_0_attn',
+ 'output_blocks_10_1_transformer_blocks_0_attn',
+ 'output_blocks_11_1_transformer_blocks_0_attn']
+]
+
+import torch
+
+def mig_newjit1(difjit):
+  def rv_n(k):
+    kybag.remove(k)
+    return bswgt[k]
+
+  dout=[dict(),dict(),dict()]
+
+  for i in range(3):
+    bswgt=difjit[i].state_dict()
+    kybag=set(bswgt.keys())
+    modkeys=modkeys3[i]
+    dout_i=dout[i]
+    for k in modkeys:
+      qkv_at1=[rv_n(k+'1_to_q.weight'),
+          rv_n(k+'1_to_k.weight'),
+          rv_n(k+'1_to_v.weight')]
+
+      wsz=qkv_at1[0].size(0)*3
+      dout_i[k+'1.in_proj_weight']=torch.cat(qkv_at1)
+      dout_i[k+'1.in_proj_bias']=torch.zeros(wsz)
+      dout_i[k+'1.out_proj.weight']= rv_n(k+'1_to_out_0.weight')
+      dout_i[k+'1.out_proj.bias']= rv_n(k+'1_to_out_0.bias')
+      
+      dout_i[k+'2.q_proj_weight']=rv_n(k+'2_to_q.weight')
+      dout_i[k+'2.k_proj_weight']=rv_n(k+'2_to_k.weight')
+      dout_i[k+'2.v_proj_weight']=rv_n(k+'2_to_v.weight')
+      dout_i[k+'2.in_proj_bias'] =torch.zeros(wsz)
+      dout_i[k+'2.out_proj.weight']= rv_n(k+'2_to_out_0.weight')
+      dout_i[k+'2.out_proj.bias']= rv_n(k+'2_to_out_0.bias')
+    rfd=nam3[i]
+    for k in rfd:
+      dout_i[rfd[k]]=rv_n(k)
+
+    for k in kybag:
+      dout_i[k]=bswgt[k]
+
+  return dout
