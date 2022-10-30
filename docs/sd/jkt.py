@@ -797,6 +797,27 @@ modkeys3=[
  'output_blocks_11_1_transformer_blocks_0_attn']
 ]
 
+modkeys4=[
+ ['input_blocks.1.1.transformer_blocks.0.attn',
+ 'input_blocks.2.1.transformer_blocks.0.attn',
+ 'input_blocks.4.1.transformer_blocks.0.attn',
+ 'input_blocks.5.1.transformer_blocks.0.attn',
+ 'input_blocks.7.1.transformer_blocks.0.attn',
+ 'input_blocks.8.1.transformer_blocks.0.attn',
+ 'middle.block.1.transformer_blocks.0.attn'],
+
+ ['output_blocks.3.1.transformer_blocks.0.attn',
+ 'output_blocks.4.1.transformer_blocks.0.attn',
+ 'output_blocks.5.1.transformer_blocks.0.attn'],
+
+ ['output_blocks.6.1.transformer_blocks.0.attn',
+ 'output_blocks.7.1.transformer_blocks.0.attn',
+ 'output_blocks.8.1.transformer_blocks.0.attn',
+ 'output_blocks.9.1.transformer_blocks.0.attn',
+ 'output_blocks.10.1.transformer_blocks.0.attn',
+ 'output_blocks.11.1.transformer_blocks.0.attn']
+]
+
 import torch
 
 def mig_newjit1(difjit):
@@ -843,7 +864,7 @@ def mkmodel_state_dict(difjit):
     return bswgt[k]
   model_state_dict = {}
   for i in range(3):
-    modkeys=modkeys3[i]
+    modkeys=modkeys4[i]
     bswgt=difjit[i].state_dict()
     kybag=set(bswgt.keys())
 
@@ -851,9 +872,9 @@ def mkmodel_state_dict(difjit):
       dmy=rv_n(k+'1.in_proj_bias')
       dmy=rv_n(k+'2.in_proj_bias')
       to_q,to_k,to_v=rv_n(k+'1.in_proj_weight').chunk(3)
-      model_state_dict[k+'1_to_q.weight']=to_q
-      model_state_dict[k+'1_to_k.weight']=to_k
-      model_state_dict[k+'1_to_v.weight']=to_v
+      model_state_dict[k+'1.to_q.weight']=to_q
+      model_state_dict[k+'1.to_k.weight']=to_k
+      model_state_dict[k+'1.to_v.weight']=to_v
     for k in kybag:
       model_state_dict[nam1[k]]=bswgt[k]
   return model_state_dict
