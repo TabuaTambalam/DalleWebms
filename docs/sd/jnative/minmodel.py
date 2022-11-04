@@ -2,8 +2,8 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from jitbase import config
-from unet_blocks import ResnetBlock, AttentionBlock, AttentionBlock_conv
+from .jitbase import config
+from .unet_blocks import ResnetBlock, AttentionBlock, AttentionBlock_conv
 
 
 def callRA(mdlist,x,emb,cond_k,cond_v):
@@ -32,7 +32,7 @@ class UNetModel(nn.Module):
 
 
         # input
-        self.input_blocks_0_0 = nn.Conv2d(bias=True, dilation=(1,1), groups=1, in_channels=in_channels, kernel_size=(3,3), out_channels=320, padding=(1,1), padding_mode='zeros', stride=(1,1))
+        self.input_blocks_0_0 = nn.Conv2d(bias=True, dilation=(1,1), groups=1, in_channels=in_channels, kernel_size=(3,3), out_channels=320, padding=(1,1), padding_mode=config.pad, stride=(1,1))
         # time
         self.freqs=nn.Parameter(torch.ones(1), requires_grad=False)
         self.time_embed_0 = nn.Linear(bias=True, in_features=320, out_features=1280)
@@ -61,21 +61,21 @@ class UNetModel(nn.Module):
         self.output_blocks[1]=nn.ModuleList([ResnetBlock(2560,1280,prv_skip=True)])
         self.output_blocks[2]=nn.ModuleList([ResnetBlock(2560,1280,prv_skip=True),		AttentionBlock_conv(1280,1)])
 
-        self.output_blocks[3]=nn.ModuleList([ResnetBlock(2560,1280,prv_skip=True),AttentionBlock(1280,5120,cat_prev=True)])	#15
-        self.output_blocks[4]=nn.ModuleList([ResnetBlock(2560,1280,prv_skip=True),AttentionBlock(1280,5120,cat_prev=True)])	#17
+        self.output_blocks[3]=nn.ModuleList([ResnetBlock(2560,1280,prv_skip=True),AttentionBlock(1280,5120)])	#15
+        self.output_blocks[4]=nn.ModuleList([ResnetBlock(2560,1280,prv_skip=True),AttentionBlock(1280,5120)])	#17
         self.output_blocks[5]=nn.ModuleList([ResnetBlock(1920,1280,prv_skip=True),AttentionBlock(1280,5120),AttentionBlock_conv(1280,1)])	#19
 
-        self.output_blocks[6]=nn.ModuleList([ResnetBlock(1920,640,prv_skip=True),AttentionBlock(640,2560,cat_prev=True)])
-        self.output_blocks[7]=nn.ModuleList([ResnetBlock(1280,640,prv_skip=True),AttentionBlock(640,2560,cat_prev=True)])
+        self.output_blocks[6]=nn.ModuleList([ResnetBlock(1920,640,prv_skip=True),AttentionBlock(640,2560)])
+        self.output_blocks[7]=nn.ModuleList([ResnetBlock(1280,640,prv_skip=True),AttentionBlock(640,2560)])
         self.output_blocks[8]=nn.ModuleList([ResnetBlock(960, 640,prv_skip=True),AttentionBlock(640,2560),AttentionBlock_conv(640,1)])
 
-        self.output_blocks[9]=nn.ModuleList([ResnetBlock(960,320,prv_skip=True),AttentionBlock(320,1280,cat_prev=True)])
-        self.output_blocks[10]=nn.ModuleList([ResnetBlock(640,320,prv_skip=True),AttentionBlock(320,1280,cat_prev=True)])
+        self.output_blocks[9]=nn.ModuleList([ResnetBlock(960,320,prv_skip=True),AttentionBlock(320,1280)])
+        self.output_blocks[10]=nn.ModuleList([ResnetBlock(640,320,prv_skip=True),AttentionBlock(320,1280)])
         self.output_blocks[11]=nn.ModuleList([ResnetBlock(640,320,prv_skip=True),AttentionBlock(320,1280)])
 
         # out
         self.out_0 = nn.GroupNorm(num_groups=32,num_channels=320,eps=0.000010)
-        self.out_2 = nn.Conv2d(bias=True, dilation=(1,1), groups=1, in_channels=320, kernel_size=(3,3), out_channels=4, padding=(1,1), padding_mode='zeros', stride=(1,1))
+        self.out_2 = nn.Conv2d(bias=True, dilation=(1,1), groups=1, in_channels=320, kernel_size=(3,3), out_channels=4, padding=(1,1), padding_mode=config.pad, stride=(1,1))
 
     def time_embedding(
         self,

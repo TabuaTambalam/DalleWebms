@@ -2,7 +2,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from jitbase import config
+from .jitbase import config
 
 class ResnetBlock(nn.Module):
     def __init__(
@@ -52,7 +52,7 @@ class AttentionBlock(nn.Module):
         self.transformer_blocks_0_ff_net_2 = nn.Linear(bias=True, in_features=features, out_features=channels)
         self.proj_out = nn.Conv2d(bias=True, dilation=(1,1), groups=1, in_channels=channels, kernel_size=(1,1), out_channels=channels, padding=(0,0), padding_mode=config.pad, stride=(1,1))
 
-    def modify0(self,x)
+    def modify0(self,x):
         return x
 
     def forward(self, x, cond_k,cond_v):

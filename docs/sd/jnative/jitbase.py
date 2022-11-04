@@ -1,3 +1,5 @@
+import torch
+
 class config:
     def ckp0(kall,*args):
         return kall(*args)
