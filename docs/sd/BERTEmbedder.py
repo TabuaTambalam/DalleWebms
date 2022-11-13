@@ -1248,8 +1248,8 @@ def to_arr_for_getter(data,nsamp=1,cuda=True):
 
   txtk=[None]*enc_l
   for i in range(enc_l):
-    emb, wgt, txt = cond_stage_model.mk_emb_wgt(i2txt[i])
-    i2txt[i] = cond_stage_model.from_emb(emb,wgt_arr=wgt,nsamp=nsamp,cuda=cuda)
+    emb, wgt, txt = mk_emb_wgt(i2txt[i])
+    i2txt[i] = from_emb(emb,wgt_arr=wgt,nsamp=nsamp,cuda=cuda)
     txtk[i]=txt
   
   for i in range(t_enc):
@@ -1660,6 +1660,16 @@ def printprompts(detailed=False):
               print(c.get_txt(j))
 
 depthLimit=10
+
+def mergedict(unit_arr,b_eraz,sta,endo):
+  for n in range(sta,endo):
+    ue=unit_arr[n]
+    if ue.id == 0:
+      if ue.eraz:
+        for k in b_eraz:
+          ue.eraz[k]=b_eraz[k]
+      else:
+        ue.eraz=b_eraz
 
 def txtErr(prmt0,msg):
   print(msg)
