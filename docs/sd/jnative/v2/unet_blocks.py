@@ -27,6 +27,7 @@ class ResnetBlock(nn.Module):
             z=self.skip_connection(x)
         return z + self.out_layers_3(F.silu(self.out_layers_0(self.in_layers_2(F.silu(self.in_layers_0(x))) + self.emb_layers_1(t).unsqueeze(2).unsqueeze(3))))
 
+#config.txt_dim=1024
 class AttentionBlock(nn.Module):
     def __init__(
         self,
@@ -44,9 +45,9 @@ class AttentionBlock(nn.Module):
         self.norm = nn.GroupNorm(affine=True, eps=1e-6, num_channels=channels, num_groups=32)
         self.proj_in = nn.Linear(bias=True, in_features=channels, out_features=channels)
         self.transformer_blocks_0_norm1 = nn.LayerNorm(elementwise_affine=True, eps=1e-5, normalized_shape=(channels,))
-        self.transformer_blocks_0_attn1 = nn.MultiheadAttention(channels, 8,batch_first=True)
+        self.transformer_blocks_0_attn1 = nn.MultiheadAttention(channels, channels>>6 ,batch_first=True)
         self.transformer_blocks_0_norm2 = nn.LayerNorm(elementwise_affine=True, eps=1e-5, normalized_shape=(channels,))
-        self.transformer_blocks_0_attn2 =  nn.MultiheadAttention(channels, 8,kdim=config.txt_dim,vdim=config.txt_dim,batch_first=True)
+        self.transformer_blocks_0_attn2 =  nn.MultiheadAttention(channels, channels>>6 ,kdim=config.txt_dim,vdim=config.txt_dim,batch_first=True)
         self.transformer_blocks_0_norm3 = nn.LayerNorm(elementwise_affine=True, eps=1e-5, normalized_shape=(channels,))
         self.transformer_blocks_0_ff_net_0_proj = nn.Linear(bias=True, in_features=channels, out_features=features<<1)
         self.transformer_blocks_0_ff_net_2 = nn.Linear(bias=True, in_features=features, out_features=channels)
