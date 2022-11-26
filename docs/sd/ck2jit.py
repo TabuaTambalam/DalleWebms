@@ -66,6 +66,20 @@ def load_state_dict_with_low_memoryRe(model, state_dict):
         new_val = torch.nn.Parameter(val,requires_grad=False)
         setattr(submodule, param_name, new_val)
 
+        
+def load_state_dict_with_low_memory_meta(model):
+    print('======2meta======')
+    metadev=torch.device('meta')
+    keys_to_submodule = get_keys_to_submodule(model)
+    mste=model.state_dict()
+    for key, submodule in keys_to_submodule.items():
+        if key.startswith('.'):
+          key=key[1:]
+        val = mste[key].to(metadev)
+
+        param_name = key.split('.')[-1]
+        new_val = torch.nn.Parameter(val,requires_grad=False)
+        setattr(submodule, param_name, new_val)
 
 def hashweight(sd):
   kizu=dict()
@@ -88,7 +102,7 @@ def gprint(sub,base):
 
 ldmpfx='model.diffusion_model.'
 
-def mkmodel_state_dict(zdk):
+def mkmodel_state_dict(zdk,difjit=None):
   import jkt
   def kfeed(pfx,k,k_dst,apnd):
     ret = k+apnd
@@ -96,7 +110,8 @@ def mkmodel_state_dict(zdk):
     return pfx+ret
 
   model_state_dict_colect=[]
-  difjit=[diffusion_emb,diffusion_mid,diffusion_out]
+  if difjit is None:
+    difjit=[diffusion_emb,diffusion_mid,diffusion_out]
   
   jna1=jkt.nam1
   
