@@ -42,12 +42,15 @@ class AttentionBlock(nn.Module):
         self.s_attnV=self.modify0
         self.c_attnK=self.modify0
         self.c_attnV=self.modify0
+        mHead=8
+        if config.mHeadVer == 2:
+            mHead=channels>>6
         self.norm = nn.GroupNorm(affine=True, eps=1e-6, num_channels=channels, num_groups=32)
         self.proj_in = nn.Linear(bias=True, in_features=channels, out_features=channels)
         self.transformer_blocks_0_norm1 = nn.LayerNorm(elementwise_affine=True, eps=1e-5, normalized_shape=(channels,))
-        self.transformer_blocks_0_attn1 = nn.MultiheadAttention(channels, channels>>6 ,batch_first=True)
+        self.transformer_blocks_0_attn1 = nn.MultiheadAttention(channels, mHead ,batch_first=True)
         self.transformer_blocks_0_norm2 = nn.LayerNorm(elementwise_affine=True, eps=1e-5, normalized_shape=(channels,))
-        self.transformer_blocks_0_attn2 =  nn.MultiheadAttention(channels, channels>>6 ,kdim=config.txt_dim,vdim=config.txt_dim,batch_first=True)
+        self.transformer_blocks_0_attn2 =  nn.MultiheadAttention(channels, mHead ,kdim=config.txt_dim,vdim=config.txt_dim,batch_first=True)
         self.transformer_blocks_0_norm3 = nn.LayerNorm(elementwise_affine=True, eps=1e-5, normalized_shape=(channels,))
         self.transformer_blocks_0_ff_net_0_proj = nn.Linear(bias=True, in_features=channels, out_features=features<<1)
         self.transformer_blocks_0_ff_net_2 = nn.Linear(bias=True, in_features=features, out_features=channels)
