@@ -9,3 +9,4 @@ class config:
 
     ckp=ckp0
     pad='zeros'		#'reflect', 'replicate', 'circular'
+    mHeadVer=1
