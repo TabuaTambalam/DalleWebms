@@ -820,6 +820,13 @@ modkeys4=[
 
 import torch
 
+def conv2linr(db,k):
+  prm=db[k]
+  if '_proj_' in k and '.weight' in k:
+    sz=list(prm.shape)
+    prm=prm.reshape(sz[:2])
+  return prm
+
 def mig_newjit1(difjit):
   def rv_n(k):
     kybag.remove(k)
@@ -854,7 +861,7 @@ def mig_newjit1(difjit):
       dout_i[rfd[k]]=rv_n(k)
 
     for k in kybag:
-      dout_i[k]=bswgt[k]
+      dout_i[k]=conv2linr(bswgt,k)
 
   return dout
 
