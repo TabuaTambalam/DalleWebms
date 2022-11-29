@@ -100,7 +100,16 @@ def gprint(sub,base):
 
 
 
+
+
 ldmpfx='model.diffusion_model.'
+
+def conv2linr(db,k):
+  prm=db[ldmpfx+k]
+  if '.proj_' in k and '.weight' in k:
+    sz=list(prm.shape)
+    prm=prm.reshape(sz[:2])
+  return prm
 
 def mkmodel_state_dict(zdk,difjit=None):
   import jkt
@@ -139,7 +148,7 @@ def mkmodel_state_dict(zdk,difjit=None):
       if k == 'freqs':
         model_state_dict[k]=torch.tensor(np.load('freqs.npy'))
       else:
-        model_state_dict[k]=zdk[ldmpfx+jna1[k]]
+        model_state_dict[k]=conv2linr(zdk,jna1[k])
     model_state_dict_colect.append(model_state_dict)
   return model_state_dict_colect
 
